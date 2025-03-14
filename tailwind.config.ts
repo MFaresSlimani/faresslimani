@@ -125,7 +125,8 @@ export default {
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-subtle': 'linear-gradient(to right, #f5f5f7, #ffffff)',
-				'gradient-shine': 'linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.5) 50%, transparent 75%)'
+				'gradient-shine': 'linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.5) 50%, transparent 75%)',
+				'dark-gradient': 'linear-gradient(to bottom, hsl(228, 16%, 12%), hsl(228, 16%, 10%))'
 			}
 		}
 	},

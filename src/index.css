@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -47,41 +48,41 @@
   }
 
   .dark {
-    --background: 222 47% 11%;
+    --background: 228 16% 12%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 11%;
+    --card: 228 16% 14%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 228 16% 12%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217 32% 17%;
+    --secondary: 226 27% 20%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217 32% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 226 27% 20%;
+    --muted-foreground: 215 20% 75%;
 
-    --accent: 245 58% 64%;
+    --accent: 250 95% 76%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 32% 17%;
-    --input: 217 32% 17%;
+    --border: 226 27% 20%;
+    --input: 226 27% 20%;
     --ring: 224 76% 48%;
 
-    --sidebar-background: 222 47% 11%;
+    --sidebar-background: 228 16% 12%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 222 47% 11%;
-    --sidebar-accent: 217 32% 17%;
+    --sidebar-primary-foreground: 228 16% 12%;
+    --sidebar-accent: 226 27% 20%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217 32% 17%;
+    --sidebar-border: 226 27% 20%;
     --sidebar-ring: 224 76% 48%;
   }
 
@@ -119,7 +120,7 @@
 
 @layer components {
   .glass-card {
-    @apply bg-white/50 dark:bg-black/30 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl;
+    @apply bg-white/50 dark:bg-card/50 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl shadow-sm dark:shadow-md dark:shadow-black/10;
   }
   
   .section-padding {
@@ -127,11 +128,11 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-tight dark:text-white;
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-tight text-foreground;
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-text-secondary dark:text-gray-300 mb-12 max-w-2xl;
+    @apply text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl;
   }
 
   .shine-effect {
@@ -139,6 +140,6 @@
   }
 
   .hover-lift {
-    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:hover:shadow-black/20;
   }
 }
