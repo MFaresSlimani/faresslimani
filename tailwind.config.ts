@@ -58,15 +58,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				// Custom colors for our portfolio
-				'surface-1': '#ffffff',
-				'surface-2': '#f5f5f7',
-				'surface-3': '#e7e7e9',
-				'text-primary': '#1d1d1f',
-				'text-secondary': '#6e6e73',
-				'text-tertiary': '#86868b',
+				'surface-1': 'hsl(var(--surface-1))',
+				'surface-2': 'hsl(var(--surface-2))',
+				'surface-3': 'hsl(var(--surface-3))',
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-tertiary': 'hsl(var(--text-tertiary))',
 				'accent-blue': '#0071e3',
 				'accent-indigo': '#5e5ce6',
 				'accent-teal': '#00c7be',
+				'gray-900': 'hsl(222, 47%, 11%)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -126,7 +127,7 @@ export default {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
 				'gradient-subtle': 'linear-gradient(to right, #f5f5f7, #ffffff)',
 				'gradient-shine': 'linear-gradient(110deg, transparent 25%, rgba(255, 255, 255, 0.5) 50%, transparent 75%)',
-				'dark-gradient': 'linear-gradient(to bottom, hsl(228, 16%, 12%), hsl(228, 16%, 10%))'
+				'dark-gradient': 'linear-gradient(to bottom, hsl(222, 47%, 11%), hsl(222, 47%, 9%))'
 			}
 		}
 	},

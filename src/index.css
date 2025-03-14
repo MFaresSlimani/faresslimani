@@ -45,45 +45,59 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --surface-1: 0 0% 100%;
+    --surface-2: 0 0% 96.1%;
+    --surface-3: 0 0% 91.4%;
+    --text-primary: 0 0% 12.2%;
+    --text-secondary: 0 0% 45.1%;
+    --text-tertiary: 0 0% 54.5%;
   }
 
   .dark {
-    --background: 228 16% 12%;
+    --background: 222 47% 11%;
     --foreground: 210 40% 98%;
 
-    --card: 228 16% 14%;
+    --card: 222 47% 13%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 228 16% 12%;
+    --popover: 222 47% 11%;
     --popover-foreground: 210 40% 98%;
 
     --primary: 217 91% 60%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 226 27% 20%;
+    --secondary: 217 32% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 226 27% 20%;
+    --muted: 217 32% 17%;
     --muted-foreground: 215 20% 75%;
 
-    --accent: 250 95% 76%;
+    --accent: 245 58% 64%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 226 27% 20%;
-    --input: 226 27% 20%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
     --ring: 224 76% 48%;
 
-    --sidebar-background: 228 16% 12%;
+    --sidebar-background: 222 47% 11%;
     --sidebar-foreground: 210 40% 98%;
     --sidebar-primary: 210 40% 98%;
-    --sidebar-primary-foreground: 228 16% 12%;
-    --sidebar-accent: 226 27% 20%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 217 32% 17%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 226 27% 20%;
+    --sidebar-border: 217 32% 17%;
     --sidebar-ring: 224 76% 48%;
+
+    --surface-1: 222 47% 11%;
+    --surface-2: 223 47% 14%;
+    --surface-3: 223 47% 17%;
+    --text-primary: 210 40% 98%;
+    --text-secondary: 214 32% 91%;
+    --text-tertiary: 214 20% 83%;
   }
 
   * {
@@ -116,11 +130,25 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-muted-foreground/30;
   }
+  
+  .dark body,
+  .dark .bg-white {
+    background-color: hsl(222, 47%, 11%);
+  }
+  
+  .dark .bg-surface-1,
+  .dark .bg-surface-2 {
+    background-color: hsl(222, 47%, 11%);
+  }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/50 dark:bg-card/50 backdrop-blur-md border border-white/20 dark:border-white/5 rounded-2xl shadow-sm dark:shadow-md dark:shadow-black/10;
+    @apply bg-white/50 backdrop-blur-md border border-white/20 rounded-2xl;
+  }
+  
+  .dark .glass-card {
+    @apply bg-card/30 backdrop-blur-md border border-white/10 shadow-lg shadow-black/20;
   }
   
   .section-padding {
@@ -128,11 +156,11 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-tight text-foreground;
+    @apply text-3xl md:text-4xl lg:text-5xl font-medium mb-6 tracking-tight text-text-primary dark:text-white;
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl;
+    @apply text-lg md:text-xl text-text-secondary dark:text-gray-300 mb-12 max-w-2xl;
   }
 
   .shine-effect {

@@ -13,8 +13,8 @@ const Index = () => {
   const { isDarkMode } = useTheme();
   
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
-      <div className="min-h-screen bg-surface-1 dark:bg-background text-foreground transition-colors duration-300">
+    <div className={isDarkMode ? 'dark' : ''}>
+      <div className="min-h-screen bg-white dark:bg-gray-900 text-foreground transition-colors duration-300">
         <Navbar />
         <Hero />
         <About />
